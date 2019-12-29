@@ -19,26 +19,40 @@ The recommender system will predict the ratings that the user will give to the m
 
 user ID: 1 top 5 recommendations: Cyclo (1995)::4.382758930148253| Office Killer (1997)::4.24082725472752| Little City (1998)::4.234925942215377| Death in Brunswick (1991)::4.224473123463171| Mamma Roma (1962)::4.178130372636395|
 
-## Predicting movie ratings using an item-bsed recommender system
+## Predicting movie ratings using an item-based recommender system
 An item based recommender system predicts a rating that userId (u) will give to itemId (i) based on the ratings that the user has previously given to items that are similar to i. More specifically, to predict rating(u,i), an item-based recommender iterates through all items that have been previously rated by user u and takes the weighted average of the ratings that the user gave to such items . The rating of item j is weighted by the similarity of item j to item i. That means the more similar item j is to the target item i, the more its rating weighs in predicting the rating of item i.
+
+![alt text][logo1]
+
+[logo1]: https://github.com/ChrisToplikar/movie-recommendation-demo/blob/master/algorithm%20of%20recommender.JPG?raw=true
+ "Algorithm"
+ 
+There are various metrics to measure the similarity between two items. The one that we use for this project is the Cosine similarity between the two item vectors.
+
+Suppose that we represent each item as a vector of all the ratings for that item, that is:
+XXXXXXXXXXXXXX
+Where 𝑟𝑟𝑢𝑢𝑢 is the rating given by user u to items i and n is the number of unique users in the system. If user u has not rated item i, then the entry 𝑟𝑟𝑢𝑢𝑢 =0 .
+Then the cosine similarity of 𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖 and of 𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑗𝑗 is calculated as follows:
+![alt text][logo2]
+
+[logo2]: https://github.com/ChrisToplikar/movie-recommendation-demo/blob/master/cosine%20similarity.JPG?raw=true
+ "Cosine Similarity"
+ 
+ Where N is the set of all unique users.
 
 ## Getting Started
 Download or clone the repository. Run the Main.java file
 
 ## Description of Project Files
-MainWindow.xaml.cs- Controls the main functionality and logic of the user interface.
-
-MainWindow.xaml- User interface of the application.
-
-Packages.cs- This file represents the Packages objects for the application.  
+* Main.java- This is the main entry to the application
+* DataBase.java- This class reads the input data set and converts the data into movie or rating objects
+* Movies.java- This class is used to represent the movie data set.
+* Ratings.java- This class is used to represent the rating data set.
+* RatingPredictors.java- This class computes the predicted ratings of users with movies
+* PredictionRatingDataHolder- This is a utililty class that keeps track of all predicted ratings.
 
 ## Testing
-Unit tests were performed on a variety of edge cases for packages.  
+Unit tests were performed on different test samples.  A sample dataset was used in testing.   
 
-## Demonstration
-Here is an example of the application running.
-![alt text][logo]
 
-[logo]: https://github.com/ChrisToplikar/WPF-shipping-inventory-demo/blob/master/demo.JPG?raw=true
- "Application Demo"
 
