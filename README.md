@@ -56,7 +56,12 @@ Download or clone the repository. Run the Main.java file
 ## Testing
 Unit tests were performed on different test samples.  A sample dataset was used in testing.
 
+## Demonstration
 
+![alt text][logo3]
+
+[logo3]: https://github.com/ChrisToplikar/movie-recommendation-demo/blob/master/output.JPG?raw=true
+ "Output"
 
 
 
