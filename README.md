@@ -1,5 +1,5 @@
 # movie-recommendation-demo
-This is a movie recommendation system built in Java.  Program reads a data file containing rated movies by users.  Program predicts similar movies that user will like in descending order. 
+This is a movie recommendation system built in Java that I made for a class project.  The application reads user information from a data set and then predicts which movies the user will most like based on thier prior ratings.  
 
 ## Description
 This is an item-based recommendation system. Recommendation systems are widely used on the web for recommending products and services to users based on their past actions and interaction with the system. Recommendation systems have important applications in several areas, such as:
@@ -54,7 +54,7 @@ Download or clone the repository. Run the Main.java file
 * PredictionRatingDataHolder- This is a utililty class that keeps track of all predicted ratings.
 
 ## Testing
-Unit tests were performed on different test samples.  A sample dataset was used in testing.   
+Unit tests were performed on different test samples.  A sample dataset was used in testing.
 
 
 
