@@ -30,9 +30,11 @@ An item based recommender system predicts a rating that userId (u) will give to 
 There are various metrics to measure the similarity between two items. The one that we use for this project is the Cosine similarity between the two item vectors.
 
 Suppose that we represent each item as a vector of all the ratings for that item, that is:
-XXXXXXXXXXXXXX
-Where 𝑟𝑟𝑢𝑢𝑢 is the rating given by user u to items i and n is the number of unique users in the system. If user u has not rated item i, then the entry 𝑟𝑟𝑢𝑢𝑢 =0 .
-Then the cosine similarity of 𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖 and of 𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑖𝑗𝑗 is calculated as follows:
+
+item<sub>i</sub>=(r<sub>1i</sub>,r<sub>2i</sub>,...r<sub>ni</sub>)
+
+Where r<sub>ui</sub> is the rating given by user u to items i and n is the number of unique users in the system. If user u has not rated item i, then the entry r<sub>ui</sub> = 0.
+Then the cosine similarity of item<sub>i</sub> and of item<sub>j</sub> is calculated as follows:
 ![alt text][logo2]
 
 [logo2]: https://github.com/ChrisToplikar/movie-recommendation-demo/blob/master/cosine%20similarity.JPG?raw=true
